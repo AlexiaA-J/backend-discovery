@@ -2,7 +2,7 @@ const Thing = require('../models/Thing')
 
 exports.createThing = (req, res, next) => {
     delete req.body._id;
-    const thing = new Thinf({
+    const thing = new Thing({
       ...req.body
     });
     thing.save().then(
